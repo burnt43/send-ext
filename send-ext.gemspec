@@ -6,6 +6,6 @@ Gem::Specification.new do |s|
   s.authors     = ['James Carson']
   s.email       = 'jms.crsn@gmail.com'
   s.homepage    = "http://tmpurl.com"
-  s.files       = ['lib/cli-builder.rb']
+  s.files       = ['lib/send-ext.rb']
   s.license     = 'MIT'
 end
