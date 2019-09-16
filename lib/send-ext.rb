@@ -1,13 +1,22 @@
 module Kernel
-  def conditional_send(method_name, *args, condition: true, &block)
+  def conditional_send(method_name, *args, condition: true, callable: nil, &block)
+    puts block.nil?
     if condition.is_a?(Proc)
       if condition.call
-        self.send(method_name, *args, &block)
+        if block.nil?
+          self.send(method_name, *args, &callable)
+        else
+          self.send(method_name, *args, &block)
+        end
       else
         self
       end
     elsif condition
-      self.send(method_name, *args, &block)
+      if block.nil?
+        self.send(method_name, *args, &callable)
+      else
+        self.send(method_name, *args, &block)
+      end
     else
       self
     end
