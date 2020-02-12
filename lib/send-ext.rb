@@ -1,6 +1,5 @@
 module Kernel
   def conditional_send(method_name, *args, condition: true, callable: nil, &block)
-    puts block.nil?
     if condition.is_a?(Proc)
       if condition.call
         if block.nil?

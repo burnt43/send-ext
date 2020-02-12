@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'send-ext'
-  s.version     = '0.0.2'
+  s.version     = '0.0.3'
   s.summary     = 'adds helpful send-like methods'
   s.description = 'adds helpful send-like methods'
   s.authors     = ['James Carson']
